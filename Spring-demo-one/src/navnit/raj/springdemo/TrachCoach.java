@@ -9,17 +9,25 @@ public class TrachCoach implements Coach {
 	
 	
 	public TrachCoach() {
-		super();
+
 	}
 
 	@Override
 	public String getDailyWorkout() {
-		return "Run a hard 5k";
+		return "TrachCoach: Run a hard 5k";
 	}
 
 	@Override
 	public String getDailyFortune() {
 		return fortuneService.getFortuneService();
 	}
-
+	
+	//add init method
+	public void doMyStartupStuff() {
+		System.out.println("TrachCoach: Inside doMyStartupStuff method");
+	}
+	//add destroy method
+	public void doMyCleanupStuff() {
+		System.out.println("TrachCoach: Inside doMyCleanupStuff method");
+	}
 }
